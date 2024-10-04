@@ -1,0 +1,16 @@
+.icon {
+  fill: transparent;
+  stroke: transparent;
+  width: 16px;
+  height: 16px;
+}
+
+.icon--search {
+  fill: rgb(241, 68, 131);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    fill: rgb(17, 193, 90);
+    //stroke: rgb(241, 68, 131);
+  }
+}

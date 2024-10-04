@@ -92,22 +92,22 @@ gulp.task('images:dev', function () {
 	);
 });
 
-const svgStack = {
-	mode: {
-		stack: {
-			example: true,
-		},
-	},
-	shape: {
-		transform: [
-			{
-				svgo: {
-					js2svg: { indent: 4, pretty: true },
-				},
-			},
-		],
-	},
-};
+// const svgStack = {
+// 	mode: {
+// 		stack: {
+// 			example: true,
+// 		},
+// 	},
+// 	shape: {
+// 		transform: [
+// 			{
+// 				svgo: {
+// 					js2svg: { indent: 4, pretty: true },
+// 				},
+// 			},
+// 		],
+// 	},
+// };
 
 const svgSymbol = {
 	mode: {
@@ -134,13 +134,13 @@ const svgSymbol = {
 	},
 };
 
-gulp.task('svgStack:dev', function () {
-	return gulp
-		.src('./src/img/svg/**/*.svg')
-		.pipe(plumber(plumberNotify('SVG:dev')))
-		.pipe(svgsprite(svgStack))
-		.pipe(gulp.dest('./build/img/svg/'))
-});
+// gulp.task('svgStack:dev', function () {
+// 	return gulp
+// 		.src('./src/img/svg/**/*.svg')
+// 		.pipe(plumber(plumberNotify('SVG:dev')))
+// 		.pipe(svgsprite(svgStack))
+// 		.pipe(gulp.dest('./build/img/svg/'))
+// });
 
 gulp.task('svgSymbol:dev', function () {
 	return gulp
@@ -187,6 +187,7 @@ gulp.task('watch:dev', function () {
 	gulp.watch('./src/js/**/*.js', gulp.parallel('js:dev'));
 	gulp.watch(
 		'./src/img/svg/*',
-		gulp.series('svgStack:dev', 'svgSymbol:dev')
+		gulp.parallel('svgSymbol:dev')
+		// gulp.series('svgStack:dev', 'svgSymbol:dev')
 	);
 });

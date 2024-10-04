@@ -3,10 +3,18 @@
   //--font-accent: 'Playfair Display', sans-serif;
 
   --page-bg: #fff;
-  --text-color: #000;
-  --accent: #ac182c;
-  --link-color: #2578c8;
-  --placeholder-color: #4b4b4b;
+  --text-color: var(--dark-primary);
+  --nav-link-color: #726e8d;
+  --placeholder-color: rgba(42, 37, 75, 0.2);
+  //--accent: #ac182c;
+
+  --dark-primary: #2a254b;
+  --primary: #4e4d93;
+  --light-grey: #f9f9f9;
+  --border-grey: #ebe8f4;
+  --border-dark: #cac6da;
+  --images---dark-chair: #f6f6f6;
+  --white: #fff;
 
   --laptop-size: 1199px;
   --tablet-size: 959px;

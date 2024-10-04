@@ -1,0 +1,30 @@
+.btn {
+  width: auto;
+  padding: 16px 32px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+
+  @media (max-width: 576px) {
+    width: 100%;
+    max-width: 340px;
+    min-width: 280px;
+  }
+
+  &--primary {
+    color: var(--white);
+    background: var(--dark-primary);
+  }
+  &--grey {
+    color: var(--dark-primary);
+    background: var(--grey);
+  }
+  &--light-grey {
+    color: var(--dark-primary);
+    background: var(--light-grey);
+  }
+  &--white {
+    color: var(--dark-primary);
+    background: var(--white);
+  }
+}

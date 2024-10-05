@@ -116,3 +116,11 @@ legend {
   min-width: 0;
   border: none;
 }
+//==========================//
+*:focus {
+  outline: none;
+}
+*:focus-visible {
+  outline: blue dashed 1px;
+  outline-offset: 3px;
+}

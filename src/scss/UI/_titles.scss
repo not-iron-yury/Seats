@@ -1,8 +1,8 @@
-.text-36,
-.text-32,
-.text-24,
-.text-20,
-.text-18 {
+.title-36,
+.title-32,
+.title-24,
+.title-20,
+.title-18 {
   line-height: 140%;
   color: var(--dark-primary);
   &--white {
@@ -10,23 +10,23 @@
   }
 }
 
-.text-36 {
+.title-36 {
   font-size: 36px;
 }
-.text-32 {
+.title-32 {
   font-size: 32px;
 }
-.text-24 {
+.title-24 {
   font-size: 24px;
 }
-.text-20 {
+.title-20 {
   font-size: 20px;
 }
-.text-18 {
+.title-18 {
   font-size: 18px;
   line-height: 150%;
 }
-.text-14 {
+.title-14 {
   font-size: 14px;
   color: var(--white);
 }

@@ -1,17 +1,12 @@
 .icon {
-  fill: var(--dark-primary);
-  //stroke: transparent;
-  width: 16px;
-  height: 16px;
-
-  &:hover {
-    fill: var(--primary);
-  }
+  fill: transparent;
+  stroke: transparent;
 }
 
 .icon--search,
 .icon--cart,
-.icon--user {
+.icon--user,
+.icon--burger {
   fill: var(--header-item-color);
   transition: fill 0.25s ease-in-out;
   &:hover {
@@ -19,6 +14,3 @@
     transition: fill 0.25s ease-in-out;
   }
 }
-
-// .icon--burger {
-// }

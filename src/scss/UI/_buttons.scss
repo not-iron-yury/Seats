@@ -1,9 +1,14 @@
 .btn {
+  display: inline-block;
   width: auto;
   padding: 16px 32px;
+
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   line-height: 150%;
+
+  border-radius: 2px;
 
   @media (max-width: 576px) {
     width: 100%;
@@ -11,20 +16,26 @@
     min-width: 280px;
   }
 
-  &--primary {
+  // &--color-primary {
+  //   color: var(--white);
+  //   background-color: var(--dark-primary);
+  // }
+  &--color-primary-light {
     color: var(--white);
-    background: var(--dark-primary);
+    background-color: var(--light-primary);
+    transition: background-color 0.25s ease-in-out;
+
+    &:hover {
+      background-color: var(--primary);
+    }
   }
-  &--grey {
-    color: var(--dark-primary);
-    background: var(--grey);
-  }
-  &--light-grey {
-    color: var(--dark-primary);
-    background: var(--light-grey);
-  }
-  &--white {
-    color: var(--dark-primary);
-    background: var(--white);
-  }
+
+  //   &--color-light-grey {
+  //     color: var(--dark-primary);
+  //     background-color: var(--light-grey);
+  //   }
+  //   &--color-white {
+  //     color: var(--dark-primary);
+  //     background-color: var(--white);
+  //   }
 }

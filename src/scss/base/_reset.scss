@@ -52,7 +52,6 @@ ul li {
 
 img {
   display: block;
-  vertical-align: top;
 }
 
 img,
@@ -63,6 +62,14 @@ svg {
 
 address {
   font-style: normal;
+}
+
+*:focus {
+  outline: none;
+}
+*:focus-visible {
+  outline: red solid 2px;
+  outline-offset: 3px;
 }
 
 /* Form */
@@ -90,13 +97,13 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-//input:focus,
-//button:focus,
-input:active,
-button:active {
-  outline: none;
-  //box-shadow: 0 0 3px 0 rgb(0, 0, 255);
-}
+// input:focus,
+// button:focus,
+// input:active,
+// button:active {
+//   outline: none;
+//   box-shadow: 0 0 3px 0 rgb(0, 0, 255);
+// }
 
 button::-moz-focus-inner {
   padding: 0;
@@ -117,10 +124,3 @@ legend {
   border: none;
 }
 //==========================//
-*:focus {
-  outline: none;
-}
-*:focus-visible {
-  outline: blue dashed 1px;
-  outline-offset: 3px;
-}

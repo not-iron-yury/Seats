@@ -1,6 +1,11 @@
 .header {
   color: var(--header-item-color);
 
+  & svg {
+    width: 16px;
+    height: 16px;
+  }
+
   &__top {
   }
 

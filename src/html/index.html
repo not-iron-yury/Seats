@@ -26,13 +26,9 @@
   </head>
 
   <body>
-    @@include('blocks/header.html')
-    <main class="main">
-      <section class="section">
-        <div class="container"></div>
-      </section>
-    </main>
-    @@include('blocks/footer.html')
+    @@include('blocks/_header.html')
+    <main class="main">@@include('blocks/hero/home.html') @@include('blocks/difference.html')</main>
+    @@include('blocks/_footer.html')
     <script src="./js/index.js"></script>
   </body>
 </html>

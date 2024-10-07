@@ -27,176 +27,148 @@ const webpack = require('webpack-stream');
 const babel = require('gulp-babel');
 const changed = require('gulp-changed');
 
-
 gulp.task('clean:docs', function (done) {
-	if (fs.existsSync('./docs/')) {
-		return gulp
-			.src('./docs/', { read: false })
-			.pipe(clean({ force: true }));
-	}
-	done();
+  if (fs.existsSync('./docs/')) {
+    return gulp.src('./docs/', { read: false }).pipe(clean({ force: true }));
+  }
+  done();
 });
 
 const fileIncludeSetting = {
-	prefix: '@@',
-	basepath: '@file',
+  prefix: '@@',
+  basepath: '@file',
 };
 
-const plumberNotify = (title) => {
-	return {
-		errorHandler: notify.onError({
-			title: title,
-			message: 'Error <%= error.message %>',
-			sound: false,
-		}),
-	};
+const plumberNotify = title => {
+  return {
+    errorHandler: notify.onError({
+      title: title,
+      message: 'Error <%= error.message %>',
+      sound: false,
+    }),
+  };
 };
 
 gulp.task('html:docs', function () {
-	return gulp
-		.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
-		.pipe(changed('./docs/'))
-		.pipe(plumber(plumberNotify('HTML')))
-		.pipe(fileInclude(fileIncludeSetting))
-		.pipe(
-			replace(
-				/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-				'$1./$4$5$7$1'
-			)
-		)
-		.pipe(
-			typograf({
-				locale: ['ru', 'en-US'],
-				htmlEntity: { type: 'digit' },
-				safeTags: [
-					['<\\?php', '\\?>'],
-					['<no-typography>', '</no-typography>'],
-				],
-			})
-		)
-		.pipe(htmlclean())
-		.pipe(gulp.dest('./docs/'));
+  return gulp
+    .src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
+    .pipe(changed('./docs/'))
+    .pipe(plumber(plumberNotify('HTML')))
+    .pipe(fileInclude(fileIncludeSetting))
+    .pipe(
+      replace(
+        /(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
+        '$1./$4$5$7$1'
+      )
+    )
+    .pipe(
+      typograf({
+        locale: ['ru', 'en-US'],
+        htmlEntity: { type: 'digit' },
+        safeTags: [
+          ['<\\?php', '\\?>'],
+          ['<no-typography>', '</no-typography>'],
+        ],
+      })
+    )
+    .pipe(htmlclean())
+    .pipe(gulp.dest('./docs/'));
 });
 
 gulp.task('sass:docs', function () {
-	return gulp
-		.src('./src/scss/*.scss')
-		.pipe(changed('./docs/css/'))
-		.pipe(plumber(plumberNotify('SCSS')))
-		.pipe(sourceMaps.init())
-		.pipe(autoprefixer())
-		.pipe(sassGlob())
-		.pipe(groupMedia())
-		.pipe(sass())		
-		.pipe(
-			replace(
-				/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-				'$1$2$3$4$6$1'
-			)
-		)
-		.pipe(csso())
-		.pipe(sourceMaps.write())
-		.pipe(cssmin())
-		.pipe(gulp.dest('./docs/css/'));
+  return gulp
+    .src('./src/scss/*.scss')
+    .pipe(changed('./docs/css/'))
+    .pipe(plumber(plumberNotify('SCSS')))
+    .pipe(sourceMaps.init())
+    .pipe(autoprefixer())
+    .pipe(sassGlob())
+    .pipe(groupMedia())
+    .pipe(sass())
+    .pipe(
+      replace(
+        /(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
+        '$1$2$3$4$6$1'
+      )
+    )
+    .pipe(csso())
+    .pipe(sourceMaps.write())
+    .pipe(cssmin())
+    .pipe(gulp.dest('./docs/css/'));
 });
 
 gulp.task('images:docs', function () {
-	return gulp
-		.src(['./src/img/**/*', '!./src/img/svg/**/*'])
-		.pipe(changed('./docs/img/'))
-		// .pipe(
-		// 	imagemin([
-		// 		imageminWebp({
-		// 			quality: 85,
-		// 		}),
-		// 	])
-		// )
-		.pipe(gulp.dest('./docs/img/'))
-		.pipe(gulp.src('./src/img/**/*'))
-		.pipe(changed('./docs/img/'))
-		// .pipe(
-		// 	imagemin(
-		// 		[
-		// 			imagemin.gifsicle({ interlaced: true }),
-		// 			imagemin.mozjpeg({ quality: 85, progressive: true }),
-		// 			imagemin.optipng({ optimizationLevel: 5 }),
-		// 		],
-		// 		{ verbose: true }
-		// 	)
-		// )
-		.pipe(gulp.dest('./docs/img/'));
+  return gulp
+    .src(['./src/img/**/*', '!./src/img/svg/**/*'])
+    .pipe(changed('./docs/img/'))
+    .pipe(gulp.dest('./docs/img/'))
+    .pipe(gulp.src('./src/img/**/*'))
+    .pipe(changed('./docs/img/'))
+    .pipe(gulp.dest('./docs/img/'));
 });
 
-const svgStack = {
-	mode: {
-		stack: {
-			example: true,
-		},
-	},
-};
+gulp.task('svg:docs', function () {
+  return gulp
+    .src(['./src/img/svg/**/*.svg', '!./src/img/svg/sprite/*'])
+    .pipe(changed('./build/img/svg'))
+    .pipe(gulp.dest('./build/img/svg/'));
+});
 
 const svgSymbol = {
-	mode: {
-		symbol: {
-			sprite: '../sprite.symbol.svg',
-		},
-	},
-	shape: {
-		transform: [
-			{
-				svgo: {
-					plugins: [
-						{
-							name: 'removeAttrs',
-							params: {
-								attrs: '(fill|stroke)',
-							},
-						},
-					],
-				},
-			},
-		],
-	},
+  mode: {
+    symbol: {
+      sprite: '../_sprite.symbol.svg',
+    },
+  },
+  shape: {
+    transform: [
+      {
+        svgo: {
+          plugins: [
+            {
+              name: 'removeAttrs',
+              params: {
+                attrs: '(fill|stroke)',
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
 };
 
-gulp.task('svgStack:docs', function () {
-	return gulp
-		.src('./src/img/svg/**/*.svg')
-		.pipe(plumber(plumberNotify('SVG:dev')))
-		.pipe(svgsprite(svgStack))
-		.pipe(gulp.dest('./docs/img/svg/'));
+gulp.task('svgSymbol:docs', function () {
+  return gulp
+    .src('./src/img/svg/sprite/*.svg')
+    .pipe(plumber(plumberNotify('SVG:docs')))
+    .pipe(svgsprite(svgSymbol))
+    .pipe(gulp.dest('./build/img/svg/'));
 });
 
-gulp.task('svgSymbol:docs', function () {
-	return gulp
-		.src('./src/img/svg/**/*.svg')
-		.pipe(plumber(plumberNotify('SVG:dev')))
-		.pipe(svgsprite(svgSymbol))
-		.pipe(gulp.dest('./docs/img/svg/'));
+gulp.task('fonts:docs', function () {
+  return gulp.src('./src/fonts/**/*').pipe(changed('./docs/fonts/')).pipe(gulp.dest('./docs/fonts/'));
 });
 
 gulp.task('files:docs', function () {
-	return gulp
-		.src('./src/files/**/*')
-		.pipe(changed('./docs/files/'))
-		.pipe(gulp.dest('./docs/files/'));
+  return gulp.src('./src/files/**/*').pipe(changed('./docs/files/')).pipe(gulp.dest('./docs/files/'));
 });
 
 gulp.task('js:docs', function () {
-	return gulp
-		.src('./src/js/*.js')
-		.pipe(changed('./docs/js/'))
-		.pipe(plumber(plumberNotify('JS')))
-		.pipe(babel())
-		.pipe(webpack(require('./../webpack.config.js')))
-		.pipe(gulp.dest('./docs/js/'));
+  return gulp
+    .src('./src/js/*.js')
+    .pipe(changed('./docs/js/'))
+    .pipe(plumber(plumberNotify('JS')))
+    .pipe(babel())
+    .pipe(webpack(require('./../webpack.config.js')))
+    .pipe(gulp.dest('./docs/js/'));
 });
 
 const serverOptions = {
-	livereload: true,
-	open: true,
+  livereload: true,
+  open: true,
 };
 
 gulp.task('server:docs', function () {
-	return gulp.src('./docs/').pipe(server(serverOptions));
+  return gulp.src('./docs/').pipe(server(serverOptions));
 });

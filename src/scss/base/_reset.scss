@@ -55,7 +55,9 @@ img {
 }
 
 img,
-svg {
+svg,
+picture {
+  display: block;
   max-width: 100%;
   height: auto;
 }

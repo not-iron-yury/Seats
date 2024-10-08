@@ -9,6 +9,7 @@
   line-height: 150%;
 
   border-radius: 2px;
+  transition: background-color 0.25s ease-in-out;
 
   @media (max-width: 576px) {
     width: 100%;
@@ -20,20 +21,23 @@
   //   color: var(--white);
   //   background-color: var(--dark-primary);
   // }
+
   &--color-primary-light {
     color: var(--white);
     background-color: var(--primary);
-    transition: background-color 0.25s ease-in-out;
-
     &:hover {
       background-color: var(--light-primary);
     }
   }
 
-  //   &--color-light-grey {
-  //     color: var(--dark-primary);
-  //     background-color: var(--light-grey);
-  //   }
+  &--color-light-grey {
+    color: var(--dark-primary);
+    background-color: var(--border-grey);
+    &:hover {
+      background-color: var(--border-dark);
+    }
+  }
+
   //   &--color-white {
   //     color: var(--dark-primary);
   //     background-color: var(--white);

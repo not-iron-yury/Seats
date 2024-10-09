@@ -1,0 +1,50 @@
+.about-section {
+  &__container {
+    display: flex;
+    max-height: 804px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 72px 6.6% 54px 0;
+    padding-left: max(25px, calc((100vw - 1280px) / 2));
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 25px;
+  }
+
+  p:nth-of-type(2) {
+    margin-bottom: 5em;
+  }
+  &__h1 {
+  }
+
+  &__button {
+    max-width: 170px;
+  }
+
+  &__img {
+    background-image: url('../img/decor-image.jpg');
+    background-image: -webkit-image-set(
+      url('../img/decor-image@x2.webp'),
+      url('../img/decor-image.webp'),
+      url('../img/decor-image@x2.jpg') 2x,
+      url('../img/decor-image.jpg') 1x
+    );
+    background-image: image-set(
+      url('../img/decor-image@x2.webp') type('image/webp') 2x,
+      url('../img/decor-image.webp') type('image/webp') 1x,
+      url('../img/decor-image@x2.jpg') type('image/jpeg') 2x,
+      url('../img/decor-image.jpg') type('image/jpeg') 1x
+    );
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

@@ -3,7 +3,6 @@ const gulp = require('gulp');
 // Tasks
 require('./gulp/dev.js');
 require('./gulp/docs.js');
-require('./gulp/fonts.js');
 
 gulp.task(
   'default',
@@ -24,12 +23,10 @@ gulp.task(
       'images:docs',
       'svg:docs',
       'svgSymbol:docs',
-      'fonts:docs',
+      'fonts:dev',
       'files:docs',
       'js:docs'
     ),
     gulp.parallel('server:docs')
   )
 );
-
-gulp.task('fonts', gulp.series('woff2', 'woff', 'del-ttf'));

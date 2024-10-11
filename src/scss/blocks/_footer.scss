@@ -1,0 +1,91 @@
+.footer {
+  color: var(--white);
+  background-color: var(--dark-primary);
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+  &__top {
+    display: flex;
+    gap: 25px;
+    padding: 58px 0 48px;
+  }
+
+  &__nav {
+    width: 50%;
+  }
+
+  &__nav-goups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.985%;
+  }
+
+  &__nav-goup {
+    & :not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__nav-item {
+  }
+
+  &__nav-item-title {
+  }
+
+  &__nav-link {
+    font-size: 14px;
+    padding: 3px 0;
+  }
+
+  &__subscr {
+    width: 50%;
+  }
+
+  &__subscr-title {
+    margin-bottom: 16px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0;
+
+    border-top: 1px var(--light-primary) solid;
+  }
+
+  &__copyright {
+    font-size: 14px;
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__social-item {
+  }
+
+  &__social-link {
+  }
+}
+
+.subscribe-footer {
+  &__fieldset {
+    display: flex;
+
+    background: #664f64;
+  }
+  &__input {
+    padding: 16px 32px;
+    width: 100%;
+    background: #664f64;
+    line-height: 150%;
+  }
+  &__input::placeholder {
+    color: rgba(255, 255, 255, 0.555);
+  }
+  &__button {
+  }
+}

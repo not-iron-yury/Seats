@@ -1,0 +1,45 @@
+.catalog {
+  &__container {
+    display: flex;
+  }
+
+  &__aside {
+    padding: 48px 0 0 80;
+    max-width: 385px;
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  &__body {
+    padding: 36px 0;
+    max-width: 875px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(281px, 1fr));
+    row-gap: 36px;
+    column-gap: 15px;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    text-align: left;
+  }
+}
+
+.product-card {
+  &__link {
+  }
+
+  &__img {
+  }
+
+  &__title {
+  }
+
+  &__price {
+  }
+}

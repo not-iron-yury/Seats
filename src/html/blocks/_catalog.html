@@ -2,10 +2,74 @@
   <div class="container catalog__container">
     <aside class="catalog__aside">
       <h2 class="visually-hidden">Фильтр товаров</h2>
-      <div class="catalog__filter"></div>
+      <form class="filter">
+        <fieldset class="filter__fieldset">
+          <legend id="filter-category-label" class="filter__legend">Категория</legend>
+
+          <label class="filter__label" for="category-folding">
+            <input type="checkbox" class="filter__checkbox" id="category-folding" name="category" value="folding" />
+            <span class="filter__checkbox-text">Складные</span>
+          </label>
+
+          <label class="filter__label" for="category-kitchen">
+            <input type="checkbox" class="filter__checkbox" id="category-kitchen" name="category" value="kitchen" />
+            <span class="filter__checkbox-text">Кухонные</span>
+          </label>
+
+          <label class="filter__label" for="category-semibar">
+            <input type="checkbox" class="filter__checkbox" id="category-semibar" name="category" value="semibar" />
+            <span class="filter__checkbox-text">Полубарные</span>
+          </label>
+
+          <label class="filter__label" for="category-bar">
+            <input type="checkbox" class="filter__checkbox" id="category-bar" name="category" value="bar" />
+            <span class="filter__checkbox-text">Барные</span>
+          </label>
+
+          <label class="filter__label" for="category-soft">
+            <input type="checkbox" class="filter__checkbox" id="category-soft" name="category" value="soft" />
+            <span class="filter__checkbox-text">Мягкие</span>
+          </label>
+
+          <label class="filter__label" for="category-armchair">
+            <input type="checkbox" class="filter__checkbox" id="category-armchair" name="category" value="armchair" />
+            <span class="filter__checkbox-text">Кресла</span>
+          </label>
+
+          <label class="filter__label" for="category-sets">
+            <input type="checkbox" class="filter__checkbox" id="category-sets" name="category" value="sets" />
+            <span class="filter__checkbox-text">Комплекты</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="filter__fieldset">
+          <legend id="filter-color-label" class="filter__legend">Цвет</legend>
+
+          <label class="filter__label" for="color-red">
+            <input type="checkbox" class="filter__checkbox" id="color-red" name="color" value="red" />
+            <span class="filter__checkbox-text">Красный</span>
+          </label>
+
+          <label class="filter__label" for="color-blue">
+            <input type="checkbox" class="filter__checkbox" id="color-blue" name="color" value="blue" />
+            <span class="filter__checkbox-text">Синий</span>
+          </label>
+
+          <label class="filter__label" for="color-green">
+            <input type="checkbox" class="filter__checkbox" id="color-green" name="color" value="green" />
+            <span class="filter__checkbox-text">Зелёный</span>
+          </label>
+
+          <label class="filter__label" for="color-yellow">
+            <input type="checkbox" class="filter__checkbox" id="color-yellow" name="color" value="yellow" />
+            <span class="filter__checkbox-text">Жёлтый</span>
+          </label>
+        </fieldset>
+      </form>
     </aside>
+
     <section class="catalog__body">
-      <h2 class="visually-hidden">Все товары</h2>
+      <h2 class="visually-hidden">Товары</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
           <article class="product-card">

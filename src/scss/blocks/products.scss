@@ -1,4 +1,4 @@
-.product-card {
+.product-intro {
   max-width: 305px;
   &--large {
     max-width: 630px;
@@ -45,5 +45,93 @@
   }
 
   &__button {
+  }
+}
+
+.product-card {
+  padding: 50px 0;
+  background-color: var(--light-grey);
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+  }
+
+  &__picture {
+  }
+
+  &__image {
+  }
+
+  &__info {
+    padding: 30px 0;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    margin-bottom: 28px;
+  }
+
+  &__decsr {
+    padding-top: 25px;
+    margin-bottom: 36px;
+    border-top: 1px solid var(--border-grey);
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__table {
+    margin-bottom: 40px;
+  }
+
+  &__table-title {
+    margin-bottom: 10px;
+  }
+
+  &__quantity {
+    margin-bottom: 48px;
+  }
+}
+.pc-table {
+  &__head {
+    font-size: 14px;
+  }
+
+  &__tr {
+    display: grid;
+    grid-template-columns: minmax(70px, 100px) minmax(100px, 138px) minmax(70px, 100px);
+  }
+
+  &__th {
+    padding-bottom: 10px;
+    font-weight: 400;
+  }
+  &__th,
+  &__td {
+    width: 100%;
+  }
+  &__th:first-child,
+  &__td:first-child {
+    text-align: left;
+    border-right: 1px solid var(--border-grey);
+  }
+  &__th:last-child,
+  &__td:last-child {
+    text-align: right;
+    border-left: 1px solid var(--border-grey);
+  }
+  &__th:nth-child(2),
+  &__td:nth-child(2) {
+    text-align: center;
+  }
+
+  &__body {
   }
 }

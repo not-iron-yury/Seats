@@ -1,0 +1,60 @@
+<section class="product-card">
+  <div class="container product-card__container">
+    <picture class="product-card__picture">
+      <source
+        srcset="./img/products/stul.webp 768w, ./img/products/stul@2x.webp 1200w"
+        sizes="(max-width: 768px) 100vw, 1200px"
+        type="image/webp"
+      />
+      <source
+        srcset="./img/products/stul.jpg 768w, ./img/products/stul@2xjpg 1200w"
+        sizes="(max-width: 768px) 100vw, 1200px"
+        type="image/jpeg"
+      />
+      <img src="./img/products/stul@2x.jpg" alt="" loading="lazy" class="product-card__image" />
+    </picture>
+    <div class="product-card__info">
+      <h1 class="title-36 product-card__title">Мягкий стул</h1>
+      <p class="title-24 product-card__price">300 руб</p>
+      <div class="product-card__decsr">
+        <p class="product-card__text">Описание товара</p>
+        <p class="product-card__text">
+          Неподвластный времени дизайн, выполненный из высококачественных материалов, является одним из наших самых
+          популярных и знаковых элементов. Мягкий стул с буковыми ножками и обивкой из кожи с жопы бегемота идеально
+          впишется в любое стильное жилое пространство.
+        </p>
+      </div>
+      <div class="product-card__table">
+        <p class="product-card__table-title">Размеры</p>
+        <table class="pc-table">
+          <thead class="pc-table__head">
+            <tr class="pc-table__tr">
+              <th class="pc-table__th">Высота</th>
+              <th class="pc-table__th">Ширина</th>
+              <th class="pc-table__th">Глубина</th>
+            </tr>
+          </thead>
+          <tbody class="pc-table__body">
+            <tr class="pc-table__tr">
+              <td class="pc-table__td">110см</td>
+              <td class="pc-table__td">75см</td>
+              <td class="pc-table__td">50см</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="quantity product-card__quantity" aria-labelledby="quantity__label">
+        <label id="quantity__label" for="quantity-input">Количество</label>
+        <div class="quantity__control">
+          <button type="button" aria-label="уменьшить количество" id="button-decrease">−</button>
+          <input type="number" id="quantity-input" name="quantity" min="1" value="1" aria-live="polite" />
+          <button type="button" aria-label="увеличить количество" id="button-increase">+</button>
+        </div>
+      </div>
+      <div class="product-card__buttons">
+        <button class="btn btn--color-primary-light product-card__button" id="to-cart">В корзину</button>
+        <button class="btn btn--color-white product-card__button" id="to-favorites">В избранное</button>
+      </div>
+    </div>
+  </div>
+</section>

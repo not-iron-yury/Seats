@@ -1,6 +1,5 @@
-// import mobileNav from './modules/mobile-nav.js';
-// mobileNav();
+import ariaLiveForFilter from './modules/aria-live-for-filter.js';
+import productQuantity from './modules/product-quantity.js';
 
-// import isAvifWebp from 'avif-webp-checker';
-// isAvifWebp({ mode: 'webp' });
-
+ariaLiveForFilter();
+productQuantity();

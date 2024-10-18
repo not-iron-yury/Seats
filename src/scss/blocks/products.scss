@@ -98,6 +98,10 @@
   &__quantity {
     margin-bottom: 48px;
   }
+
+  &__buttons :not(:last-child) {
+    margin-right: 16px;
+  }
 }
 .pc-table {
   &__head {

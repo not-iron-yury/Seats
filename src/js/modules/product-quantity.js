@@ -1,7 +1,7 @@
 function productQuantity() {
-  const buttonDecrease = document.getElementById('button-decrease');
-  const buttonIncrease = document.getElementById('button-increase');
-  const quantityInput = document.getElementById('quantity-input');
+  const buttonDecrease = document.querySelector('.quantity__btn-decrease');
+  const buttonIncrease = document.querySelector('.quantity__btn-increase');
+  const quantityInput = document.querySelector('.quantity__input');
 
   if (quantityInput) {
     buttonDecrease.onclick = decreaseQuantity;

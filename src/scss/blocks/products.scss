@@ -97,6 +97,9 @@
 
   &__quantity {
     margin-bottom: 48px;
+    & > div {
+      background-color: #fff;
+    }
   }
 
   &__buttons :not(:last-child) {

@@ -43,19 +43,11 @@
           </tbody>
         </table>
       </div>
-      <div class="quantity product-card__quantity" aria-labelledby="quantity__label">
-        <label id="quantity__label" for="quantity-input">Количество</label>
+      <div class="quantity product-card__quantity">
         <div class="quantity__control">
+          <label class="quantity__label" for="quantity-input">Количество</label>
           <button type="button" aria-label="уменьшить количество" class="quantity__btn-decrease">−</button>
-          <input
-            type="number"
-            id="quantity-input"
-            class="quantity__input"
-            name="quantity"
-            min="1"
-            value="1"
-            aria-live="polite"
-          />
+          <input type="number" id="quantity-input" class="quantity__input" name="quantity" min="1" value="1" />
           <button type="button" aria-label="увеличить количество" class="quantity__btn-increase">+</button>
         </div>
       </div>

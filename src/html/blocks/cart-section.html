@@ -1,7 +1,7 @@
 <section class="cart">
   <div class="container cart__container">
     <div class="cart__content">
-      <header class="cart-header cart__header" aria-hidden="true">
+      <header class="cart-header cart__header">
         <ul class="cart-header__list">
           <li class="cart-header__item">Товар</li>
           <li class="cart-header__item">Количество</li>
@@ -9,30 +9,14 @@
         </ul>
       </header>
       <ul class="cart__list">
-        <li
-          class="cart-item cart__item"
-          aria-labelledby="p0001-title"
-          aria-describedby="p0001-description p0001-price quantity-label-p0001 p0001-item-total"
-        >
+        <li class="cart-item cart__item">
           <div class="cart-item__choice">
             <label class="filter__label" for="p0001-chosen">
-              <input
-                type="checkbox"
-                class="checkbox"
-                id="p0001-chosen"
-                value="true"
-                aria-label="Товар выбран для заказа"
-                checked
-              />
+              <input type="checkbox" id="p0001-chosen" class="checkbox" value="true" checked />
             </label>
           </div>
-          <article
-            data-product-id="p0001"
-            class="cart-product cart-item__product"
-            aria-labelledby="p0001-title"
-            aria-describedby="p0001-description p0001-price"
-          >
-            <picture aria-hidden="true">
+          <article data-product-id="p0001" class="cart-product cart-item__product">
+            <picture>
               <source srcset="./img/image-cart.webp 1x, ./img/image-cart@2x.webp 2x" type="image/webp" />
               <source srcset="./img/image-cart.jpg 1x, ./img/image-cart@2x.jpg 2x" type="image/jpeg" />
               <img
@@ -46,64 +30,45 @@
               />
             </picture>
             <div class="cart-product__specs">
-              <h2 id="p0001-title" class="title-20 cart-product__title">Мягкий стул</h2>
-              <p id="p0001-description" class="cart-product__descr">
+              <h2 class="title-20 cart-product__title">Мягкий стул</h2>
+              <p class="cart-product__descr">
                 Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты.
               </p>
-              <p id="p0001-price" class="cart-product__price" aria-label="Цена: 1000 руб">
-                <span class="cart-product__price-value">1000</span> руб.
-              </p>
+              <p class="cart-product__price"><span class="cart-product__price-value">1000</span> руб.</p>
             </div>
           </article>
-          <div class="quantity cart-item__quantity" aria-labelledby="quantity-label-p0001">
-            <label id="quantity-label-p0001" for="quantity-input-p0001" class="sr-only">Количество</label>
+          <div class="quantity cart-item__quantity">
             <div class="quantity__control quantity__control--cart">
-              <button
-                type="button"
-                aria-label="уменьшить количество"
-                aria-controls="quantity-input-p0001"
-                class="quantity__btn quantity__btn-decrease"
-              >
+              <button type="button" class="quantity__btn quantity__btn-decrease" aria-label="Уменьшить количество">
                 −
               </button>
-              <input
-                type="number"
-                id="quantity-input-p0001"
-                class="quantity__input"
-                name="quantity"
-                min="1"
-                value="1"
-                aria-live="polite"
-              />
-              <button
-                type="button"
-                aria-label="увеличить количество"
-                aria-controls="quantity-input-p0001"
-                class="quantity__btn quantity__btn-increase"
-              >
+              <label class="quantity__label" for="quantity-input-p0001">
+                <input
+                  type="number"
+                  id="quantity-input-p0001"
+                  class="quantity__input"
+                  name="quantity"
+                  min="1"
+                  value="1"
+                />
+              </label>
+              <button type="button" class="quantity__btn quantity__btn-increase" aria-label="Увеличить количество">
                 +
               </button>
             </div>
           </div>
-          <div class="cart-item-total cart-item__total" aria-labelledby="p0001-item-total">
-            <p
-              id="p0001-item-total"
-              class="cart-item-total__cost"
-              aria-label="Общая стоимость по товару: 1000 руб"
-              aria-live="polite"
-            >
-              <span class="cart-item-total__value">1000</span> руб.
-            </p>
+          <div class="cart-item-total cart-item__total">
+            <p class="cart-item-total__cost"><span class="cart-item-total__value">1000</span> руб.</p>
           </div>
         </li>
       </ul>
       <footer class="cart-footer cart__footer">
         <p class="cart-footer__delivery-info">Cтоимость доставки рассчитываются при оформлении заказа</p>
         <div class="cart-footer__summary">
-          <p class="cart-footer__total-price" aria-label="Итоговая стоимость заказа: 1000 руб" aria-live="polite">
+          <p class="cart-footer__total-price">
             Общая стоимость: <span class="cart-footer__total-value">1000</span> руб.
           </p>
-          <button type="submit" class="cart-footer__order-button">Оформить заказ</button>
+          <button class="cart-footer__order-button">Оформить заказ</button>
         </div>
       </footer>
     </div>

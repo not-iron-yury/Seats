@@ -1,76 +1,90 @@
 <section class="cart">
-  <div class="container">
-    <div class="cart__body">
-      <table class="cart__table">
-        <thead class="cart__thead">
-          <tr class="cart__tr">
-            <th class="cart__th text-left">Продукт</th>
-            <th class="cart__th text-right">Количество</th>
-            <th class="cart__th text-right">Стоимость</th>
-          </tr>
-        </thead>
-        <tbody class="cart__tbody">
-          <!-- компонент описывающий товар в корзине -->
-          <tr class="cart__tr cart-item">
-            <td class="cart__td cart-item__product text-left">
-              <article
-                data-product-id="p0001"
-                class="cart-product"
-                aria-labelledby="p0001-title"
-                aria-describedby="p0001-description p0001-price p0001-item-total"
-              >
-                <picture aria-hidden="true">
-                  <source srcset="./img/image-cart.webp 1x, ./img/image-cart@2x.webp 2x" type="image/webp" />
-                  <source srcset="./img/image-cart.jpg 1x, ./img/image-cart@2x.jpg 2x" type="image/jpeg" />
-                  <img
-                    src="./img/image-cart.jpg"
-                    srcset="./img/image-cart.jpg 1x, ./img/image-cart@2x.jpg 2x"
-                    alt="мягкий стул"
-                    loading="lazy"
-                    class="cart-product__image"
-                    width="135"
-                    height="151"
-                  />
-                </picture>
-                <div class="cart-product__specs">
-                  <h2 id="p0001-title" class="title-20 cart-product__title">Мягкий стул</h2>
-                  <p id="p0001-description" class="cart-product__descr">
-                    Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты.
-                  </p>
-                  <p id="p0001-price" class="cart-item__price" aria-label="1000 руб">
-                    <span class="item-price-value">1000</span> руб.
-                  </p>
-                </div>
-              </article>
-            </td>
-            <td class="cart__td cart-item__quantity text-right">
-              <div class="quantity" aria-labelledby="quantity-label-p0001">
-                <label id="quantity-label-p0001" for="quantity-input-p0001" class="sr-only">Количество</label>
-                <div class="quantity__control quantity__control--cart">
-                  <button type="button" aria-label="уменьшить количество" class="quantity__btn-decrease">−</button>
-                  <input
-                    type="number"
-                    id="quantity-input-p0001"
-                    class="quantity__input"
-                    name="quantity"
-                    min="1"
-                    value="1"
-                    aria-live="polite"
-                  />
-                  <button type="button" aria-label="увеличить количество" class="quantity__btn-increase">+</button>
-                </div>
-              </div>
-            </td>
-            <td class="cart__td cart-item__total text-right">
-              <p id="p0001-item-total" class="cart-item__total" aria-label="всего 1000 руб">
-                <span class="item-total-value">1000</span> руб.
+  <div class="container cart__container">
+    <div class="cart__content">
+      <header class="cart-header cart__header" aria-hidden="true">
+        <ul class="cart-header__list">
+          <li class="cart-header__item">Товар</li>
+          <li class="cart-header__item">Количество</li>
+          <li class="cart-header__item">Стоимость</li>
+        </ul>
+      </header>
+      <ul class="cart__list">
+        <li class="cart-item cart__item" aria-labelledby="p0001-title quantity-label-p0001 p0001-item-total">
+          <button class="cart-item__remove">&times;</button>
+          <article
+            data-product-id="p0001"
+            class="cart-product cart-item__product"
+            aria-labelledby="p0001-title"
+            aria-describedby="p0001-description p0001-price p0001-item-total"
+          >
+            <picture aria-hidden="true">
+              <source srcset="./img/image-cart.webp 1x, ./img/image-cart@2x.webp 2x" type="image/webp" />
+              <source srcset="./img/image-cart.jpg 1x, ./img/image-cart@2x.jpg 2x" type="image/jpeg" />
+              <img
+                src="./img/image-cart.jpg"
+                srcset="./img/image-cart.jpg 1x, ./img/image-cart@2x.jpg 2x"
+                alt="мягкий стул"
+                loading="lazy"
+                class="cart-product__image"
+                width="135"
+                height="151"
+              />
+            </picture>
+            <div class="cart-product__specs">
+              <h2 id="p0001-title" class="title-20 cart-product__title">Мягкий стул</h2>
+              <p id="p0001-description" class="cart-product__descr">
+                Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты.
               </p>
-            </td>
-          </tr>
-          <!--/компонент описывающий товар в корзине -->
-        </tbody>
-        <tfoot></tfoot>
-      </table>
+              <p id="p0001-price" class="cart-product__price" aria-label="Цена: 1000 руб">
+                <span class="cart-product__price-value">1000</span> руб.
+              </p>
+            </div>
+          </article>
+          <div class="quantity cart-item__quantity" aria-labelledby="quantity-label-p0001">
+            <label id="quantity-label-p0001" for="quantity-input-p0001" class="sr-only">Количество</label>
+            <div class="quantity__control quantity__control--cart">
+              <button
+                type="button"
+                aria-label="уменьшить количество"
+                aria-controls="quantity-input-p0001"
+                class="quantity__btn quantity__btn-decrease"
+              >
+                −
+              </button>
+              <input
+                type="number"
+                id="quantity-input-p0001"
+                class="quantity__input"
+                name="quantity"
+                min="1"
+                value="1"
+              />
+              <button
+                type="button"
+                aria-label="увеличить количество"
+                aria-controls="quantity-input-p0001"
+                class="quantity__btn quantity__btn-increase"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div id="p0001-item-total" class="cart-item-total cart-item__total">
+            <p class="cart-item-total__cost" aria-label="Общая стоимость по товару: 1000 руб">
+              <span class="cart-item-total__value">1000</span> руб.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <footer class="cart-footer cart__footer">
+        <p class="cart-footer__delivery-info">Cтоимость доставки рассчитываются при оформлении заказа</p>
+        <section class="cart-footer__footer-summary">
+          <p class="cart-footer__total-price" aria-label="Итоговая стоимость заказа: 1000 руб" aria-live="polite">
+            Общая стоимость: <span class="cart-footer__total-value">1000</span> руб.
+          </p>
+          <button type="submit" class="cart-footer__order-button">Оформить заказ</button>
+        </section>
+      </footer>
     </div>
   </div>
 </section>

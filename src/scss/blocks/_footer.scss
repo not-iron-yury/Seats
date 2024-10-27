@@ -1,6 +1,6 @@
 .footer {
   color: var(--white);
-  background-color: var(--dark-primary);
+  background-color: var(--color-dark-primary);
 
   svg {
     width: 24px;
@@ -52,7 +52,7 @@
     justify-content: space-between;
     padding: 22px 0;
 
-    border-top: 1px var(--light-primary) solid;
+    border-top: 1px var(--color-light-primary) solid;
   }
 
   &__copyright {

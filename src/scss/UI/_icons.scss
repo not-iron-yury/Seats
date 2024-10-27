@@ -6,10 +6,10 @@
   &--cart,
   &--user,
   &--burger {
-    fill: var(--header-item-color);
+    fill: var(--color-header-item);
     transition: fill 0.25s ease-in-out;
     &:hover {
-      fill: var(--dark-primary);
+      fill: var(--color-dark-primary);
       transition: fill 0.25s ease-in-out;
     }
   }
@@ -23,7 +23,7 @@
     fill: var(--white);
     transition: fill 0.25s ease-in-out;
     &:hover {
-      fill: var(--primary);
+      fill: var(--color-primary);
       transition: fill 0.25s ease-in-out;
     }
   }

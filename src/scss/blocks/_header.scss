@@ -1,5 +1,5 @@
 .header {
-  color: var(--header-item-color);
+  color: var(--color-header-item);
 
   & svg {
     width: 16px;
@@ -10,7 +10,7 @@
   }
 
   &__bottom {
-    background: var(--light-grey);
+    background: var(--color-light-grey);
   }
 
   &__container {
@@ -72,7 +72,7 @@
   &__item {
     transition: color 0.25s ease-in-out;
     &:hover {
-      color: var(--primary);
+      color: var(--color-primary);
       transition: color 0.25s ease-in-out;
     }
   }

@@ -43,9 +43,9 @@ input[type='number']::-webkit-inner-spin-button {
   }
 
   &__control--cart {
-    background-color: var(--light-grey);
+    background-color: var(--color-light-grey);
   }
   &__control--cart button:hover {
-    background-color: var(--light-grey);
+    background-color: var(--color-light-grey);
   }
 }

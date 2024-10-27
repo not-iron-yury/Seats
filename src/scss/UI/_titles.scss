@@ -5,8 +5,8 @@
 .title-18 {
   line-height: 140%;
   color: #2a254b;
-  &--white {
-    color: var(--white);
+  &_white {
+    color: var(--color-white);
   }
 }
 
@@ -28,5 +28,5 @@
 }
 .title-14 {
   font-size: 14px;
-  color: var(--white);
+  color: var(--color-white);
 }

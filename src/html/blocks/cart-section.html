@@ -10,7 +10,9 @@
       </header>
       <ul class="cart__list">
         <li class="cart-item cart__item" aria-labelledby="p0001-title quantity-label-p0001 p0001-item-total">
-          <button class="cart-item__remove">&times;</button>
+          <button class="cart-item__remove" type="button" aria-label="Удалить товар из корзины">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <article
             data-product-id="p0001"
             class="cart-product cart-item__product"
@@ -69,8 +71,8 @@
               </button>
             </div>
           </div>
-          <div id="p0001-item-total" class="cart-item-total cart-item__total">
-            <p class="cart-item-total__cost" aria-label="Общая стоимость по товару: 1000 руб">
+          <div class="cart-item-total cart-item__total">
+            <p id="p0001-item-total" class="cart-item-total__cost" aria-label="Общая стоимость по товару: 1000 руб">
               <span class="cart-item-total__value">1000</span> руб.
             </p>
           </div>

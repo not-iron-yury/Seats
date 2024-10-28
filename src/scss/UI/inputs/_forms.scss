@@ -1,0 +1,18 @@
+.search {
+  display: inline-block;
+  &__fieldset {
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    padding: 2px 5px;
+    border: 1px solid rgb(241, 241, 241);
+  }
+  &__input::placeholder {
+    color: var(--color-placeholder);
+  }
+  &__button {
+    height: 16px;
+    margin-left: 10px;
+  }
+}

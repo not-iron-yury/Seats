@@ -1,0 +1,37 @@
+.hero-home {
+  padding: 60px 0;
+
+  &__flex {
+    display: flex;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 760px;
+    padding: 60px;
+  }
+  &__h1 {
+    margin-bottom: 40px;
+    max-width: 620px;
+    color: var(--color-white);
+  }
+
+  &__button {
+    margin-bottom: auto;
+    width: 170px;
+  }
+
+  &__descr {
+    margin-top: 15px;
+    color: var(--color-white);
+  }
+
+  &__img {
+    flex-shrink: 0;
+    width: 520px;
+    height: 584px;
+  }
+}

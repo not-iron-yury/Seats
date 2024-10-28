@@ -6,7 +6,7 @@
   &__img {
     max-height: 375px;
     margin-bottom: 24px;
-    background-color: var(--color-border-grey);
+    background-color: var(--color-second-primary);
   }
   &__title {
     margin-bottom: 8px;
@@ -50,7 +50,7 @@
 
 .product-card {
   padding: 50px 0;
-  background-color: var(--color-light-grey);
+  background-color: var(--color-second-primary);
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;

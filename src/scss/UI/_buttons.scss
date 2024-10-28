@@ -10,7 +10,7 @@
   line-height: 150%;
 
   border-radius: 2px;
-  transition: background-color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 
   @media (max-width: 576px) {
     width: 100%;
@@ -18,24 +18,38 @@
     min-width: 280px;
   }
 
-  &--color-primary-light {
+  &_theme_primary {
     color: var(--color-white);
     background-color: var(--color-primary);
     &:hover {
-      background-color: var(--color-border-dark);
+      background-color: var(--color-light-primary);
     }
   }
 
-  &--color-light-grey {
-    color: var(--color-dark-primary);
-    background-color: var(--color-border-grey);
+  &_theme_primary-light {
+    color: var(--color-white);
+    background-color: var(--color-light-primary);
     &:hover {
-      background-color: var(--color-border-dark);
+      color: var(--color-primary);
+      background-color: var(--color-white);
     }
   }
 
-  &--color-white {
-    color: var(--color-dark-primary);
+  &_theme_primary-light_second {
+    color: var(--color-white);
+    background-color: var(--color-light-primary);
+    &:hover {
+      color: var(--color-text);
+      background-color: var(--color-second-primary);
+    }
+  }
+
+  &_theme_white {
+    color: var(--color-text);
     background-color: var(--color-white);
+    &:hover {
+      color: var(--color-text);
+      background-color: var(--color-second-primary);
+    }
   }
 }

@@ -1,6 +1,6 @@
 .footer {
   color: var(--color-white);
-  background-color: var(--color-dark-primary);
+  background-color: var(--color-primary);
 
   svg {
     width: 24px;
@@ -28,10 +28,12 @@
     }
   }
 
-  &__nav-item {
+  &__nav-link {
+    color: var(--color-white);
   }
 
   &__nav-item-title {
+    color: var(--color-white);
   }
 
   &__nav-link {
@@ -68,24 +70,5 @@
   }
 
   &__social-link {
-  }
-}
-
-.subscribe-footer {
-  &__fieldset {
-    display: flex;
-
-    background: #664f64;
-  }
-  &__input {
-    padding: 16px 32px;
-    width: 100%;
-    background: #664f64;
-    line-height: 150%;
-  }
-  &__input::placeholder {
-    color: rgba(255, 255, 255, 0.555);
-  }
-  &__button {
   }
 }

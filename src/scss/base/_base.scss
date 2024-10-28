@@ -4,7 +4,7 @@ body {
   justify-content: space-between;
   min-height: 100vh;
 
-  background-color: var(--color-page-bg);
+  background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-main);
 
@@ -20,8 +20,4 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1310px; // 1280px
-}
-
-a {
-  color: var(--link-color);
 }

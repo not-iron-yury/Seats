@@ -7,11 +7,18 @@
         магазинах и многом другом.
       </p>
 
-      <form action="#" method="post" class="subscribe">
-        <fieldset>
+      <form class="subscribe subscribe-section__form" name="joinus">
+        <fieldset class="subscribe__fieldset">
           <legend class="sr-only">Подписка на email рассылку</legend>
-          <label for="email" class="sr-only">Введите ваш email:</label>
-          <input type="email" id="email" name="email" required placeholder="your@email.com" class="subscribe__input" />
+          <label for="joinus" class="sr-only">Введите ваш email:</label>
+          <input
+            id="joinus"
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+            class="subscribe__input subscribe__input_light"
+          />
           <button type="submit" class="btn btn_theme_primary">Подписаться</button>
         </fieldset>
       </form>

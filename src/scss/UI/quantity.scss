@@ -31,21 +31,19 @@ input[type='number']::-webkit-inner-spin-button {
     justify-content: space-between;
     width: 122px;
     height: 46px;
-  }
-  &__control button {
-    padding: 10px 12px;
-    color: #a7a7a7;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  &__control button:hover {
-    background-color: #fff;
+
+    &_theme_white {
+      background-color: var(--color-white);
+    }
+    &_theme_second-primary {
+      background-color: var(--color-second-primary);
+    }
   }
 
-  &__control--cart {
-    background-color: var(--color-second-primary);
-  }
-  &__control--cart button:hover {
-    background-color: var(--color-second-primary);
+  &__button {
+    padding: 10px 12px;
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: 18px;
   }
 }

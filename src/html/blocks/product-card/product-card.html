@@ -44,15 +44,19 @@
         </table>
       </div>
       <div class="quantity product-card__quantity">
-        <div class="quantity__control">
-          <label class="quantity__label" for="quantity-input">Количество</label>
-          <button type="button" aria-label="уменьшить количество" class="quantity__btn-decrease">−</button>
+        <label class="quantity__label" for="quantity-input">Количество</label>
+        <div class="quantity__control quantity__control_theme_white">
+          <button type="button" aria-label="уменьшить количество" class="quantity__button quantity__btn-decrease">
+            −
+          </button>
           <input type="number" id="quantity-input" class="quantity__input" name="quantity" min="1" value="1" />
-          <button type="button" aria-label="увеличить количество" class="quantity__btn-increase">+</button>
+          <button type="button" aria-label="увеличить количество" class="quantity__button quantity__btn-increase">
+            +
+          </button>
         </div>
       </div>
       <div class="product-card__buttons">
-        <button type="button" class="btn btn_theme_primary-light product-card__button" id="to-cart">В корзину</button>
+        <button type="button" class="btn btn_theme_primary product-card__button" id="to-cart">В корзину</button>
         <button type="button" class="btn btn_theme_white product-card__button" id="to-favorites">В избранное</button>
       </div>
     </div>

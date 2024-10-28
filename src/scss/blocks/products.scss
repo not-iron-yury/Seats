@@ -1,8 +1,6 @@
 .product-intro {
   max-width: 305px;
-  &--large {
-    max-width: 630px;
-  }
+
   &__img {
     max-height: 375px;
     margin-bottom: 24px;
@@ -78,7 +76,7 @@
   &__decsr {
     padding-top: 25px;
     margin-bottom: 36px;
-    border-top: 1px solid var(--color-border-grey);
+    border-top: 1px solid var(--color-border);
   }
 
   &__text {
@@ -97,9 +95,6 @@
 
   &__quantity {
     margin-bottom: 48px;
-    & > div {
-      background-color: #fff;
-    }
   }
 
   &__buttons :not(:last-child) {
@@ -107,6 +102,8 @@
   }
 }
 .pc-table {
+  border-collapse: collapse;
+
   &__head {
     font-size: 14px;
   }
@@ -127,12 +124,12 @@
   &__th:first-child,
   &__td:first-child {
     text-align: left;
-    border-right: 1px solid var(--color-border-grey);
+    border-right: 1px solid var(--color-border);
   }
   &__th:last-child,
   &__td:last-child {
     text-align: right;
-    border-left: 1px solid var(--color-border-grey);
+    border-left: 1px solid var(--color-border);
   }
   &__th:nth-child(2),
   &__td:nth-child(2) {

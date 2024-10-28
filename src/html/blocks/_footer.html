@@ -70,19 +70,19 @@
       </nav>
       <div class="footer__subscr">
         <p class="footer__subscr-title">Присоединяйтесь к нашей рассылке</p>
-        <form action="#" method="post" class="subscribe-footer">
-          <fieldset class="subscribe-footer__fieldset">
+        <form class="subscribe" name="subscribe">
+          <fieldset class="subscribe__fieldset">
             <legend class="sr-only">Подписка на email рассылку</legend>
-            <label for="email" class="sr-only">Введите ваш email:</label>
+            <label for="subscribe" class="sr-only">Введите ваш email:</label>
             <input
+              id="subscribe"
               type="email"
-              id="email"
               name="email"
-              placeholder="example@domain.com"
+              placeholder="your@email.com"
               required
-              class="subscribe-footer__input"
+              class="subscribe__input"
             />
-            <button type="submit" class="btn btn_theme_white subscribe-footer__button">Подписаться</button>
+            <button type="submit" class="btn btn_theme_white_second">Подписаться</button>
           </fieldset>
         </form>
       </div>
@@ -91,7 +91,7 @@
       <p class="footer__copyright">Copyright 2024 ИП Васечкин И.И.</p>
       <ul class="footer__social-list">
         <li class="footer__social-item">
-          <a href="#" class="footer__social-link" target="_blank" aria-label="открыть linkedin" rel="noopener nofollow">
+          <a href="#" class="footer__social-link" target="_blank" aria-label="linkedin" rel="noopener nofollow">
             <svg class="icon icon--linkedin" aria-hidden="true">
               <use href="./img/svg/_sprite.symbol.svg#linkedin"></use>
             </svg>
@@ -99,7 +99,7 @@
           </a>
         </li>
         <li class="footer__social-item">
-          <a href="#" class="footer__social-link" target="_blank" aria-label="открыть facebook" rel="noopener nofollow">
+          <a href="#" class="footer__social-link" target="_blank" aria-label="facebook" rel="noopener nofollow">
             <svg class="icon icon--facebook" aria-hidden="true">
               <use href="./img/svg/_sprite.symbol.svg#facebook"></use>
             </svg>
@@ -107,7 +107,7 @@
           </a>
         </li>
         <li class="footer__social-item">
-          <a href="#" class="footer__social-link" target="_blank" aria-label="открыть linkedin" rel="noopener nofollow">
+          <a href="#" class="footer__social-link" target="_blank" aria-label="linkedin" rel="noopener nofollow">
             <svg class="icon icon--instagram" aria-hidden="true">
               <use href="./img/svg/_sprite.symbol.svg#instagram"></use>
             </svg>
@@ -115,7 +115,7 @@
           </a>
         </li>
         <li class="footer__social-item">
-          <a href="#" class="footer__social-link" target="_blank" aria-label="открыть linkedin" rel="noopener nofollow">
+          <a href="#" class="footer__social-link" target="_blank" aria-label="linkedin" rel="noopener nofollow">
             <svg class="icon icon--skype" aria-hidden="true">
               <use href="./img/svg/_sprite.symbol.svg#skype"></use>
             </svg>
@@ -123,7 +123,7 @@
           </a>
         </li>
         <li class="footer__social-item">
-          <a href="#" class="footer__social-link" target="_blank" aria-label="открыть twitter" rel="noopener nofollow">
+          <a href="#" class="footer__social-link" target="_blank" aria-label="twitter" rel="noopener nofollow">
             <svg class="icon icon--twitter" aria-hidden="true">
               <use href="./img/svg/_sprite.symbol.svg#twitter"></use>
             </svg>
@@ -131,13 +131,7 @@
           </a>
         </li>
         <li class="footer__social-item">
-          <a
-            href="#"
-            class="footer__social-link"
-            target="_blank"
-            aria-label="открыть pinterest"
-            rel="noopener nofollow"
-          >
+          <a href="#" class="footer__social-link" target="_blank" aria-label="pinterest" rel="noopener nofollow">
             <svg class="icon icon--pinterest" aria-hidden="true">
               <use href="./img/svg/_sprite.symbol.svg#pinterest"></use>
             </svg>

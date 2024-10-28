@@ -16,40 +16,42 @@
     width: 100%;
     max-width: 340px;
     min-width: 280px;
+    padding: 10px 16px;
   }
+  &_theme {
+    &_primary {
+      color: var(--color-white);
+      background-color: var(--color-primary);
+      &:hover {
+        background-color: var(--color-light-primary);
+      }
+    }
 
-  &_theme_primary {
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    &:hover {
+    &_primary-light {
+      color: var(--color-white);
       background-color: var(--color-light-primary);
+      &:hover {
+        color: var(--color-text);
+        background-color: var(--color-second-primary);
+      }
     }
-  }
 
-  &_theme_primary-light {
-    color: var(--color-white);
-    background-color: var(--color-light-primary);
-    &:hover {
-      color: var(--color-primary);
+    &_white {
+      color: var(--color-text);
       background-color: var(--color-white);
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-light-primary);
+      }
     }
-  }
 
-  &_theme_primary-light_second {
-    color: var(--color-white);
-    background-color: var(--color-light-primary);
-    &:hover {
+    &_white_second {
       color: var(--color-text);
-      background-color: var(--color-second-primary);
-    }
-  }
-
-  &_theme_white {
-    color: var(--color-text);
-    background-color: var(--color-white);
-    &:hover {
-      color: var(--color-text);
-      background-color: var(--color-second-primary);
+      background-color: var(--color-white);
+      &:hover {
+        color: var(--color-text);
+        background-color: var(--color-second-primary);
+      }
     }
   }
 }

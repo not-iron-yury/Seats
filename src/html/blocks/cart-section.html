@@ -38,21 +38,20 @@
             </div>
           </article>
           <div class="quantity cart-item__quantity">
-            <div class="quantity__control quantity__control--cart">
-              <button type="button" class="quantity__btn quantity__btn-decrease" aria-label="Уменьшить количество">
+            <label class="quantity__label sr-only" for="quantity-input-p0001">Количество</label>
+            <div class="quantity__control quantity__control_theme_second-primary">
+              <button type="button" class="quantity__button quantity__btn-decrease" aria-label="уменьшить количество">
                 −
               </button>
-              <label class="quantity__label" for="quantity-input-p0001">
-                <input
-                  type="number"
-                  id="quantity-input-p0001"
-                  class="quantity__input"
-                  name="quantity"
-                  min="1"
-                  value="1"
-                />
-              </label>
-              <button type="button" class="quantity__btn quantity__btn-increase" aria-label="Увеличить количество">
+              <input
+                type="number"
+                id="p0001-quantity-input"
+                class="quantity__input"
+                name="quantity"
+                min="1"
+                value="1"
+              />
+              <button type="button" class="quantity__button quantity__btn-increase" aria-label="увеличить количество">
                 +
               </button>
             </div>
@@ -90,21 +89,20 @@
             </div>
           </article>
           <div class="quantity cart-item__quantity">
-            <div class="quantity__control quantity__control--cart">
-              <button type="button" class="quantity__btn quantity__btn-decrease" aria-label="Уменьшить количество">
+            <label class="quantity__label sr-only" for="quantity-input-p0001">Количество</label>
+            <div class="quantity__control quantity__control_theme_second-primary">
+              <button type="button" class="quantity__button quantity__btn-decrease" aria-label="уменьшить количество">
                 −
               </button>
-              <label class="quantity__label" for="quantity-input-p0001">
-                <input
-                  type="number"
-                  id="quantity-input-p0001"
-                  class="quantity__input"
-                  name="quantity"
-                  min="1"
-                  value="1"
-                />
-              </label>
-              <button type="button" class="quantity__btn quantity__btn-increase" aria-label="Увеличить количество">
+              <input
+                type="number"
+                id="p0001-quantity-input"
+                class="quantity__input"
+                name="quantity"
+                min="1"
+                value="1"
+              />
+              <button type="button" class="quantity__button quantity__btn-increase" aria-label="увеличить количество">
                 +
               </button>
             </div>
@@ -120,7 +118,7 @@
           <p class="cart-footer__total-price">
             Общая стоимость: <span class="cart-footer__total-value">1000</span> руб.
           </p>
-          <button class="cart-footer__order-button">Оформить заказ</button>
+          <button class="btn btn_theme_primary cart-footer__order-button">Оформить заказ</button>
         </div>
       </footer>
     </div>

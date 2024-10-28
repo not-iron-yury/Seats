@@ -1,0 +1,32 @@
+.cart-list {
+  padding: 28px 0;
+  border-top: 1px solid var(--color-light-grey);
+  border-bottom: 1px solid var(--color-light-grey);
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: 30px 6fr 2fr 2fr;
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__choice {
+    align-self: center;
+  }
+
+  &__product {
+  }
+
+  &__quantity {
+    padding-top: 12px;
+    justify-self: center;
+  }
+
+  &__total {
+    padding-top: 10px;
+    justify-self: right;
+  }
+
+  &-total__cost {
+    font-size: 18px;
+  }
+}

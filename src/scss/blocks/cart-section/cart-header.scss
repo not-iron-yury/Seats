@@ -1,0 +1,23 @@
+.cart-header {
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-dark-primary);
+
+  &__list {
+    display: grid;
+    grid-template-columns: 6fr 2fr 2fr;
+    padding-left: 30px;
+  }
+
+  &__item {
+    &_name {
+      text-align: left;
+    }
+    &_quantity {
+      text-align: center;
+    }
+    &_cost {
+      text-align: right;
+    }
+  }
+}

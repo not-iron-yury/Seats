@@ -18,13 +18,8 @@
     min-width: 280px;
   }
 
-  // &--color-primary {
-  //   color: var(--white);
-  //   background-color: var(--color-dark-primary);
-  // }
-
   &--color-primary-light {
-    color: var(--white);
+    color: var(--color-white);
     background-color: var(--color-primary);
     &:hover {
       background-color: var(--color-border-dark);
@@ -41,6 +36,6 @@
 
   &--color-white {
     color: var(--color-dark-primary);
-    background-color: var(--white);
+    background-color: var(--color-white);
   }
 }

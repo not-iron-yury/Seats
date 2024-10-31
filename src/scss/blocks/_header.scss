@@ -1,9 +1,4 @@
 .header {
-  & svg {
-    width: 16px;
-    height: 16px;
-  }
-
   &__top {
   }
 
@@ -15,14 +10,15 @@
     display: flex;
     align-items: center;
 
-    &--top {
+    &_top {
       justify-content: space-between;
       max-width: 1390px;
       padding: 21px 15px;
     }
-    &--bottom {
+    &_bottom {
       justify-content: center;
       padding: 18px 15px;
+      border-bottom: 1px solid rgba(211, 211, 211, 0.3);
     }
   }
 
@@ -37,14 +33,6 @@
     gap: 32px;
   }
 
-  &__nav {
-    &--top {
-    }
-
-    &--bottom {
-    }
-  }
-
   &__buttons {
     display: flex;
     align-items: center;
@@ -57,19 +45,25 @@
 }
 
 .nav {
+  &_bottom {
+    width: 90%;
+  }
+
   &__list {
     display: flex;
     align-items: center;
 
-    &--top {
+    &_top {
       gap: 32px;
     }
-    &--bottom {
-      gap: 44px;
+    &_bottom {
+      display: grid;
+      grid-auto-flow: column;
     }
   }
 
   &__item {
+    justify-self: center;
   }
 
   &__link {

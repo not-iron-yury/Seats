@@ -20,7 +20,7 @@
   }
 
   p:nth-of-type(2) {
-    margin-bottom: 5em;
+    margin-bottom: 20px;
   }
   &__h1 {
   }
@@ -30,18 +30,18 @@
   }
 
   &__img {
-    background-image: url('../img/decor-image.jpg');
+    background-image: url('../img/decor/bottom.jpg');
     background-image: -webkit-image-set(
-      url('../img/decor-image@x2.webp'),
-      url('../img/decor-image.webp'),
-      url('../img/decor-image@x2.jpg') 2x,
-      url('../img/decor-image.jpg') 1x
+      url('../img/decor/bottom@2x.webp'),
+      url('../img/decor/bottom.webp'),
+      url('../img/decor/bottom@2x.jpg') 2x,
+      url('../img/decor/bottom.jpg') 1x
     );
     background-image: image-set(
-      url('../img/decor-image@x2.webp') type('image/webp') 2x,
-      url('../img/decor-image.webp') type('image/webp') 1x,
-      url('../img/decor-image@x2.jpg') type('image/jpeg') 2x,
-      url('../img/decor-image.jpg') type('image/jpeg') 1x
+      url('../img/decor/bottom@2x.webp') type('image/webp') 2x,
+      url('../img/decor/bottom.webp') type('image/webp') 1x,
+      url('../img/decor/bottom@2x.jpg') type('image/jpeg') 2x,
+      url('../img/decor/bottom.jpg') type('image/jpeg') 1x
     );
     width: 50%;
     background-repeat: no-repeat;

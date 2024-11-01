@@ -1,0 +1,15 @@
+.product-intro {
+  max-width: 305px;
+
+  &__img {
+    max-height: 375px;
+    margin-bottom: 24px;
+    background-color: var(--color-second-primary);
+  }
+  &__title {
+    margin-bottom: 8px;
+  }
+  &__price {
+    font-weight: 500;
+  }
+}

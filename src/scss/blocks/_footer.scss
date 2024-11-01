@@ -1,25 +1,39 @@
 .footer {
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background-color: var(--color-bg-footer);
 
-  svg {
-    width: 24px;
-    height: 24px;
-  }
   &__top {
     display: flex;
     gap: 25px;
     padding: 58px 0 48px;
+
+    @media (max-width: 960px) {
+      flex-direction: column;
+      gap: 50px;
+    }
   }
 
   &__nav {
     width: 50%;
+
+    @media (max-width: 960px) {
+      width: 100%;
+    }
   }
 
   &__nav-goups {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3.985%;
+
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 40px;
+    }
+    @media (max-width: 360px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__nav-goup {
@@ -30,23 +44,43 @@
 
   &__nav-link {
     color: var(--color-white);
+    padding: 7px 0;
   }
 
   &__nav-item-title {
     color: var(--color-white);
+    text-transform: uppercase;
+
+    @media (max-width: 960px) {
+      font-size: 18px;
+    }
   }
 
   &__nav-link {
     font-size: 14px;
     padding: 3px 0;
+
+    @media (max-width: 960px) {
+      font-size: 16px;
+      padding: 5px 0;
+    }
   }
 
   &__subscr {
     width: 50%;
+
+    @media (max-width: 960px) {
+      max-width: 500px;
+      width: 100%;
+    }
   }
 
   &__subscr-title {
     margin-bottom: 16px;
+
+    @media (max-width: 576px) {
+      font-size: 18px;
+    }
   }
 
   &__bottom {

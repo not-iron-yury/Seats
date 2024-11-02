@@ -3,6 +3,10 @@
   line-height: 140%;
   color: var(--color-dark-primary);
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: 6fr 2fr 2fr;

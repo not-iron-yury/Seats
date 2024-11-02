@@ -1,11 +1,14 @@
 .cart-product {
   display: flex;
+  gap: 15px;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
 
   &__image {
     max-width: 109px;
-    margin-right: 24px;
   }
-
   &__specs {
     max-width: 400px;
     & :not(:last-child) {

@@ -6,12 +6,21 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 65px;
+
+    @media (max-width: 960px) {
+      gap: 35px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__picture {
   }
 
   &__image {
+    max-width: 500px;
   }
 
   &__info {
@@ -51,6 +60,11 @@
 
   &__buttons :not(:last-child) {
     margin-right: 16px;
+
+    @media (max-width: 576px) {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
   }
 }
 .pc-table {

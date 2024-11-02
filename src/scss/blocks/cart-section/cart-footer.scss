@@ -2,11 +2,20 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media (max-width: 576px) {
+    flex-direction: column;
+    gap: 30px;
+  }
+
   &__delivery-info {
     font-size: 14px;
   }
 
-  &__footer-summary {
+  &__summary {
     margin-bottom: 16px;
   }
 
@@ -16,10 +25,10 @@
   }
 
   &__total-value {
-    margin-left: 10px;
     font-size: 24px;
   }
 
   &__order-button {
+    align-items: end;
   }
 }

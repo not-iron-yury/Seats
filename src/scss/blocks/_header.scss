@@ -1,8 +1,9 @@
 .header {
   &__top {
+    padding: 21px 0;
   }
-
   &__bottom {
+    padding: 18px 0;
     background: var(--color-second-primary);
     @media (max-width: 960px) {
     }
@@ -15,12 +16,10 @@
     &_top {
       justify-content: space-between;
       max-width: 1390px;
-      padding: 21px 15px;
     }
     &_bottom {
       justify-content: center;
-      padding: 18px 15px;
-      border-bottom: 1px solid rgba(211, 211, 211, 0.3);
+
       @media (max-width: 960px) {
         padding: 50px 15px;
       }

@@ -6,6 +6,10 @@
     max-width: 1280px;
     padding: 72px 62px 54px;
     background-color: var(--color-white);
+
+    @media (max-width: 768px) {
+      padding: 30px 20px;
+    }
   }
 
   &__header {
@@ -14,6 +18,9 @@
 
   &__list {
     margin-bottom: 16px;
+    @media (max-width: 576px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__item {

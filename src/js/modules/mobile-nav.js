@@ -1,13 +1,14 @@
-// function mobileNav() {
-// 	const navBtn = document.querySelector('.mobile-nav-btn');
-// 	const nav = document.querySelector('.mobile-nav');
-// 	const menuIcon = document.querySelector('.nav-icon');
+function mobileNavOpenClose() {
+  const navBtn = document.getElementById('burger');
+  if (navBtn) {
+    const headerBottom = document.querySelector('.header__bottom');
 
-// 	navBtn.onclick = function () {
-// 		nav.classList.toggle('mobile-nav--open');
-// 		menuIcon.classList.toggle('nav-icon--active');
-// 		document.body.classList.toggle('no-scroll');
-// 	};
-// }
+    navBtn.onclick = function () {
+      document.body.classList.toggle('no-scroll');
+      navBtn.classList.toggle('burger_active');
+      headerBottom.classList.toggle('header__bottom_active');
+    };
+  }
+}
 
-// export default mobileNav;
+export default mobileNavOpenClose;

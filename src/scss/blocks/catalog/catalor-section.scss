@@ -1,0 +1,40 @@
+.catalog {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding: 20px 15px;
+    }
+  }
+
+  &__aside {
+    padding: 48px 0;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+  }
+
+  &__grid {
+    padding: 36px 0 120px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      padding: 20px 0 80px;
+    }
+  }
+  &__filter-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  &__filter-btn {
+    margin-bottom: 15px;
+
+    &_filter {
+    }
+    &_sort {
+    }
+  }
+}

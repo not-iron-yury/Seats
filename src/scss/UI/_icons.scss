@@ -15,6 +15,18 @@
     }
   }
 
+  &_down {
+    width: 9px;
+    height: 5px;
+    fill: var(--color-text);
+    transition: transform 0.25s ease-in-out;
+
+    &_active {
+      transform: rotateZ(180deg);
+      transition: transform 0.25s ease-in-out;
+    }
+  }
+
   &_facebook,
   &_instagram,
   &_linkedin,

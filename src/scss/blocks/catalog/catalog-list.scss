@@ -1,0 +1,19 @@
+.catalog-list {
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 36px;
+  column-gap: 20px;
+  margin-bottom: 32px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__item {
+    text-align: left;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}

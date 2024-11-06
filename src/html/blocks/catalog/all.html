@@ -1,17 +1,37 @@
 <section class="catalog">
+  <h2 class="sr-only">Каталог - все товары</h2>
   <div class="container catalog__container">
-    <aside class="catalog__aside">@@include('../../filter-products/filter.html')</aside>
+    <aside class="catalog__aside">
+      <div class="catalog__filter-buttons">
+        <button class="btn btn_theme_second-primary btn_functional_filter catalog__filter-btn" data-filter="filter">
+          Фильтр
+          <svg class="icon icon_down">
+            <use href="./img/svg/_sprite.symbol.svg#down"></use>
+          </svg>
+        </button>
+        <button class="btn btn_theme_second-primary btn_functional_filter catalog__filter-btn" data-filter="sort">
+          Сортировка
+          <svg class="icon icon_down">
+            <use href="./img/svg/_sprite.symbol.svg#down"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- <button class="btn btn_theme_second-primary catalog__mob-btn catalog__mob-btn_sort">Сортировка</button> -->
+      @@include('../../filter-products/filter.html')
+      <!--  -->
+      @@include('../../filter-products/sort.html')
+    </aside>
 
-    <section class="catalog__body">
-      <h2 class="sr-only">Товары</h2>
-      <ul class="catalog__list">
-        <li class="catalog__item">@@include('../../products-intro/product-1.html')</li>
-        <li class="catalog__item">@@include('../../products-intro/product-1.html')</li>
-        <li class="catalog__item">@@include('../../products-intro/product-1.html')</li>
-        <li class="catalog__item">@@include('../../products-intro/product-1.html')</li>
-        <li class="catalog__item">@@include('../../products-intro/product-1.html')</li>
+    <section class="catalog__grid">
+      <h2 class="sr-only">Список товаров</h2>
+      <ul class="catalog-list">
+        <li class="catalog-list__item">@@include('../../products-intro/product-1.html')</li>
+        <li class="catalog-list__item">@@include('../../products-intro/product-1.html')</li>
+        <li class="catalog-list__item">@@include('../../products-intro/product-1.html')</li>
+        <li class="catalog-list__item">@@include('../../products-intro/product-1.html')</li>
+        <li class="catalog-list__item">@@include('../../products-intro/product-1.html')</li>
       </ul>
-      <button type="button" class="btn btn_theme_primary-light catalog__button">Показать ещё</button>
+      <button type="button" class="btn btn_theme_primary-light">Показать ещё</button>
     </section>
   </div>
 </section>
